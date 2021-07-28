@@ -1,0 +1,12 @@
+docker run -d \
+> -p 1433:1433 \
+> -e "ACCEPT_EULA=Y" \ 
+> -e "SA_PASSWORD=YOUR PASSWORD" \
+> -v ~/Documents/SQLMount:/SQLMount \
+> --name YOUR OWN NAME \
+> mcr.microsoft.com/mssql/server:2019-latest
+
+Please not the "ACCEPT_EULA=Y" must use double quote and underline\
+and please update the following: YOUR NAME \ YOUR OWN NAME
+
+the common error is must accept eula, this happens when you use a single quote for 'ACCEPT_EULA=Y'
